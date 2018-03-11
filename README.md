@@ -3,7 +3,9 @@
 grasshopper を経由することで、入出力をインタラクティブにできる。  
 ReduceMesh で削減して気に入らなくて、 Undo でいちいち戻すのを避けれる（はず）。  
 
-ghPython のコードは冗長に見えるが、フォーラムによると、Rhino の SDK の仕様的に、 Rhino.Doc を噛ませる必要とか書いてあるのでたぶんそういうもの。速度を比べてもそんなに遅くないのでまあ。  
+ghPython のコードは冗長に見えるが、フォーラムによると、Rhino の SDK の仕様的に、 RhinoApp、RhinoDoc を噛ませる必要とか書いてあるのでたぶんそういうもの。速度を比べてもそんなに遅くないのでまあ。  
+
+![photo](ReduceMesh-via-ghPython.jpg)  
 
 ---  
 
