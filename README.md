@@ -39,3 +39,8 @@ Toggle を True にすると削減が始まる。
 - ghPython (0.6.0.3)  
 
 ghPython はここから→([http://www.food4rhino.com/app/ghpython](http://www.food4rhino.com/app/ghpython))  
+
+
+---  
+
+[https://github.com/naysok/ReduceMesh-via-ghPython](https://github.com/naysok/ReduceMesh-via-ghPython)
