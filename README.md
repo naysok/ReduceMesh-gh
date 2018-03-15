@@ -5,6 +5,36 @@ ReduceMesh で削減して気に入らなくて、 Undo でいちいち戻すの
 
 ghPython のコードは冗長に見えるが、フォーラムによると、Rhino の SDK の仕様的に、 RhinoApp、RhinoDoc を噛ませる必要とか書いてあるのでたぶんそういうもの。速度を比べてもそんなに遅くないのでまあ。  
 
+```python
+
+import Rhino.RhinoApp as ra
+import Rhino.RhinoDoc as rd
+
+doc = rd.ActiveDoc;
+
+if bool == True:
+    print "Success !!"
+    print "reduced by " + str(P) + " percent"
+
+    if M is not None:
+        meshObj = doc.Objects.AddMesh(M)
+        doc.Objects.UnselectAll()
+        doc.Objects.Select(meshObj)
+        ra.RunScript("_-ReduceMesh _ReductionPercentage %s _Enter" %P ,False)
+        mObj = doc.Objects.GetSelectedObjects(False,False)
+        geomOut = []
+        for m in mObj:
+            geomOut.Add(m.Geometry)
+        doc.Objects.Delete(meshObj,True)
+        a = geomOut
+
+else:
+    print "NA"
+
+    a = M
+
+```
+
 ![photo](ReduceMesh-via-ghPython.jpg)  
 
 ---  
